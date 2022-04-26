@@ -1,0 +1,12 @@
+;; shadow-cljs configuration
+{:deps true
+ 
+ :builds
+ {:dev
+  {:target :browser 
+   :modules {:main {:init-fn search-bar-helix.main/init}}
+   :compiler-options {:output-feature-set :es6}
+   :devtools {:http-root    "public"
+              :http-port    8844
+              :reload-strategy :full 
+              :preloads  [devtools.preload]}}}}
